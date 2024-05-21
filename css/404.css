@@ -1,0 +1,52 @@
+body{margin:0;padding:0;font-family:"微軟正黑體", Helvetica, Arial, sans-serif;font-size: 16px;}
+img{border:none;}
+.missingPage,
+.countdown{margin:15px auto;width:96%;max-width:800px;}
+.missingPage:after{content:'';display:block;height:5px;border-radius:3px;background:#DEE2D3;}
+.missingPage h1{border-bottom:1px solid #888;padding:0 0 5px;margin:0 0 10px;text-align:center;}
+.missingPage h1 img{height:60px;width:auto;}
+
+.missingPage .body p{margin:30px 0 0 0;line-height:1.3;text-align:left;}
+.missingPage .body p>span{display:inline-block;vertical-align:top;}
+.missingPage .body p>span:first-child{width:calc(76% - 92px);text-align:right;}
+.missingPage .body p>span ~ span{width:22%}
+.missingPage .body p>span>span{display:block;margin-top:.5em;padding-top: .4em;font-size:.85em;border-top: 1px solid #c6cbb9}
+
+.missingPage .body a.link{position:relative;top:-15px;display:inline-block;height:80px;width:80px;line-height:64px;margin:4px;color:#fff;text-decoration:none;border-radius:50%;text-align:center;background-color:#77bb00;background:linear-gradient(to bottom,#7fbb00,#60a600);transition:.2s;}
+.missingPage .body a.link:hover,
+.missingPage .body a.link:focus{box-shadow:#bd0 0 0 0 4px;outline:none;}
+.missingPage .body a.link:before{content:'';position:absolute;width:40px;height:40px;background:url(../images/404bg3.png) no-repeat center bottom;top:-36px;left:26px;}
+.missingPage .body a.link:after{position:absolute;content:'home';left:0;top:20px;width:80px;text-align:center;font-size:.9em;}
+
+.missingPage .body:before,
+.missingPage .body:after{content:'';display:block;}
+.missingPage .body:before{background:url(../images/404bg1.png) no-repeat 0 bottom;background-size:140px auto;height:140px;}
+.missingPage .body:after{background:url(../images/404bg2.png) no-repeat right bottom;background-size:150px auto;height:160px;}
+.countdown{color:#555;font-size:.9em;text-align:center;}
+.countdown p{margin:0;line-height:1.4;}
+.countdown em {font-size:1.2em;display:inline-block;margin:0 2px;font-style:normal;color:#c20;min-width: 1em;}
+
+@media (max-width:410px){
+	.missingPage .body a.link{top:5px;}
+	.missingPage .body p>span ~ span>span{margin-top: 2.1em}
+}
+
+@media (min-width:700px){
+	.missingPage .body a.link{top:-20px;}
+	.missingPage .body:before,
+	.missingPage .body:after{height:180px;}
+	.missingPage .body p{float: left;min-width:560px;margin-top: 40px;}
+	.missingPage .body:after,
+	.missingPage .body:before{background-size:auto;}
+
+	.missingPage .body p>span:first-child,
+	.missingPage .body p>span ~ span{width:auto;white-space: nowrap;}
+
+	.countdown{clear: both}
+}
+
+
+
+
+
+

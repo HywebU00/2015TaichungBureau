@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS Document */
+.header .search,
+/* .navigation { background:#ec7505;} */
+.navigation { background:#cd4800;}/* 無障礙修改 20210628 */
+
+.header .search ,
+.header .search a ,
+.navigation ,
+.navigation a {color:#fff;}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input.text:focus ,
+textarea:focus,
+input[type="file"]:focus,
+select:focus{border-color:#fb0;box-shadow:#fb0 0 0 0 3px;}
+
+
+.navigation{color:#fff;}
+
+.header .search input[type="submit"] { background-color:#1f7a8c;}
+.header .search input[type="submit"]:hover,
+.header .search input[type="submit"]:focus { background-color:#ec7505;}
+.header .search input[type="text"]{background:#fff; color:#333;}
+
+.footer { /* background:#c85831;color:#eaba87; */ background: #cd4800; color: #ffc;}
+.footer a ,
+.footer>nav li a{color:#ffc;}
+.footer>section{border:none; background:#186c7d; color:#dbe2e6;}
+.footer>section a { color:#ffc;}
+/* .footer>nav li a:hover,
+.footer>nav li a:focus{ color:#ffc;} */
+.footer>section a:hover,
+.footer>section a:focus { color:#fff;}
+.footer>nav>ul{border-color:#e4c288;}
+.visitor em,
+.update em{color:#def;}
+.fatfootCtrl input{background-image:url(../images/fatfootCtrl2.png)}
+
+.icons,
+.newsCard,
+.adBlockH { border-color:#555;}
+
+.center>header{border-color:#1f7a8c;}
+.np ul li a {border-bottom-color:#7c8785;}
+.np ul li a:hover,
+.np ul li a:focus{background-color:#f3b100;border-color:#f3b100;}
+
+.function li a:hover,
+.function li a:focus{background-color:#1f7a8c;box-shadow:#1f7a8c 0 0 0 2px;}
+
+.category li a:hover {border-color:#ec7505;}
+.category li a:focus {border-color:#ec7505; box-shadow:#ec7505 0 0 0 1px;}
+.category li.here a  {border-color:#ec7505; box-shadow:#ec7505 0 0 0 2px;background:#ec7505;color:#fff;}
+.category li.here a:hover,
+.category li.here a:focus{border-color:#fff;}
+@media screen and (max-width: 800px) {
+	.category li.here a {box-shadow:none;}
+}
+
+.page ul li.here a{background: #ec7505;border-color: #ec7505;box-shadow: #ec7505 0 0 0 1px;}
+.page ul li.here a:hover,
+.page ul li.here a:focus {background: #d30;border-color: #fb3;box-shadow: #fb3 0 0 0 1px;}
+.page ul li a:hover,
+.page ul li a:focus{background-color:transparent; border-color:#ec7505;position: relative;box-shadow:#ec7505 0 0 0 1px inset;}
