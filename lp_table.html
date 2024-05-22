@@ -150,11 +150,12 @@
 </nav>
 
 <section class="page" title="分頁功能">
-<p>共 430 筆資料，第<abbr title="目前在第19頁，總共43頁">19/43</abbr>頁，<label for="perPage">每頁顯示筆數</label>
+<p>共 <em>430</em> 筆資料，第<abbr title="目前在第19頁，總共43頁">19/43</abbr>頁，<label for="perPage">每頁顯示筆數</label>
 <select name="perPage" id="perPage" onchange="perPageChange(this.value);">
 <option value="10">10</option>
 <option value="30">30</option>
 </select>筆
+<input type="button" value="確定">
 </p>
 <ul>
 <li class="first"><a href="#">第一頁</a></li>
@@ -302,7 +303,7 @@
 <!--/.center--></div>
 
 <footer class="footer"><a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區">:::</a>
-<div class="fatfootCtrl"><input type="button" title="控制選單收放" name="sildeCtrlbtn" id="sildeCtrlbtn" value="收合" /></div>
+<div class="fatfootCtrl"><button type="button" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button></div>
 <nav>
 <ul>
 <li><a href="#">公告訊息</a>

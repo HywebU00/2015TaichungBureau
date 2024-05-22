@@ -339,16 +339,57 @@ $(document).ready(function(){
 		}
 	});
 
-	// Fatfooter, qrCode 開合
-	$(function(){
-		$('.fatfootCtrl').click(function(){
-			$(this).toggleClass('close');
-			$('.qrcode').slideToggle();
-			$('footer>nav>ul>li>ul').slideToggle(function(){
-				$(this).toggleClass('close');
-			});
-		});
-	});
+	// // Fatfooter, qrCode 開合
+	// $(function(){
+	// 	$('.fatfootCtrl').click(function(){
+	// 		$(this).toggleClass('close');
+	// 		$('.qrcode').slideToggle();
+	// 		$('footer>nav>ul>li>ul').slideToggle(function(){
+	// 			$(this).toggleClass('close');
+	// 		});
+	// 	});
+	// });
+
+    // ---------- 2024/5 無障礙修改 ---------- //
+	// Fatfooter, qrCode 開合 
+	var _footer = $('footer.footer');
+	var _fatfootCtrlBtn = _footer.find('button.btn-fatfooter');
+	var _footerNav = _footer.find('nav>ul>li>ul');
+	var _footerQrcode = _footer.find('.qrcode');
+
+	if (_footerNav.first().is(':visible')) {
+		_fatfootCtrlBtn.removeClass('close').attr('aria-expanded', true);
+	} else {
+		_fatfootCtrlBtn.addClass('close').attr('aria-expanded', false);
+	}
+
+	_fatfootCtrlBtn.click(function () {
+		if (_footerNav.first().is(':visible')) {
+			_footerNav.add(_footerQrcode).stop().slideUp(400);
+			_fatfootCtrlBtn.addClass('close').attr('aria-expanded', false);
+		} else {
+			_footerNav.add(_footerQrcode).stop().slideDown(400);
+			_fatfootCtrlBtn.removeClass('close').attr('aria-expanded', true);
+		}
+	})
+
+
+	// ---------- 2024/5 無障礙修改 ---------- //
+	// 分頁顯示筆數 select 元件加 aria-label 屬性（2024 無障礙修改）
+	$('.page').find('select').attr('aria-label', '每頁顯示筆數');
+
+	// ---------- 2024/5 無障礙修改 ---------- //
+	// .searchDv input, select 加 aria-label 屬性
+	var _searchTb = $('.searchDv').find('table.searchLayout');
+	var _searchLabelTd = _searchTb.find('td:first-child');
+	var _dateRange = _searchTb.find(".dateRange2");
+	_searchLabelTd.each( function(){
+		let _this = $(this);
+		_this.next('td').children('input, select').attr('aria-label', _this.text());
+	})
+	_dateRange.find('input[type="date"]').first().attr('aria-label', '日期範圍：起日');
+	_dateRange.find('input[type="date"]').last().attr('aria-label', '日期範圍：訖日');
+
 
 	//相簿輪播
 	$('.albumSlide').each(function(){
