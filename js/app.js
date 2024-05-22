@@ -357,6 +357,8 @@ $(document).ready(function(){
 	var _footerNav = _footer.find('nav>ul>li>ul');
 	var _footerQrcode = _footer.find('.qrcode');
 
+	_fatfootCtrlBtn.text('控制按鈕');
+
 	if (_footerNav.first().is(':visible')) {
 		_fatfootCtrlBtn.removeClass('close').attr('aria-expanded', true);
 	} else {
