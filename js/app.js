@@ -350,7 +350,7 @@ $(document).ready(function(){
 	// 	});
 	// });
 
-    // ---------- 2024/5 無障礙修改 ---------- //
+  // ---------- 2024/5 無障礙修改 ---------- //
 	// Fatfooter, qrCode 開合 
 	var _footer = $('footer.footer');
 	var _fatfootCtrlBtn = _footer.find('button.btn-fatfooter');
@@ -384,13 +384,14 @@ $(document).ready(function(){
 	// .searchDv input, select 加 aria-label 屬性
 	var _searchTb = $('.searchDv').find('table.searchLayout');
 	var _searchLabelTd = _searchTb.find('td:first-child');
-	var _dateRange = _searchTb.find(".dateRange2");
 	_searchLabelTd.each( function(){
-		let _this = $(this);
-		_this.next('td').children('input, select').attr('aria-label', _this.text());
+		$(this).next('td').children('input, select').attr('aria-label', _this.text());
 	})
-	_dateRange.find('input[type="date"]').first().attr('aria-label', '日期範圍：起日');
-	_dateRange.find('input[type="date"]').last().attr('aria-label', '日期範圍：訖日');
+
+	// 日期範圍
+	var _dateRange = _searchTb.find(".dateRange2");
+	_dateRange.find('input:first-child').attr('aria-label', '開始日期');
+	_dateRange.find('input:last-child').attr('aria-label', '結束日期');
 
 
 	//相簿輪播
