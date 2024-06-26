@@ -325,6 +325,7 @@ $(document).ready(function(){
 	
 	//gotop
 	_goTop = $('.goTop');
+	_goTop.children('a').attr('role', 'button');// 2024 無障礙修改
 	_goTop.click(function(e){
 		$("html,body").stop(true,false).animate({scrollTop:0},700, function(){
 			$(".goCenter").focus();
